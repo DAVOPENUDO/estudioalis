@@ -22,8 +22,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Routes bien
-                                                       
+// Routes                                          
 app.get('/', (req, res) => {
   res.render('inicio', {
     title: 'Estudio de Belleza Alis | Cambios de Imagen Profesionales',
