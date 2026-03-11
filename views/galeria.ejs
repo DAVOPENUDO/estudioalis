@@ -1,0 +1,143 @@
+<%- include('partials/header') %>
+
+<!-- ===== PAGE HEADER ===== -->
+<section class="page-header">
+  <div class="container">
+    <span class="section__label">Nuestro Portafolio</span>
+    <h1 class="page-header__title"><span class="highlight-gold">Galería</span></h1>
+    <p class="page-header__subtitle">Una selección de mis transformaciones más impactantes y creativas</p>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="section">
+  <div class="container">
+    <!-- Filters -->
+    <div class="gallery-filters reveal">
+      <button class="gallery-filter active" data-filter="all">Todos</button>
+      <button class="gallery-filter" data-filter="color">Color</button>
+      <button class="gallery-filter" data-filter="maquillaje">Maquillaje</button>
+      <button class="gallery-filter" data-filter="peinado">Peinado</button>
+      <button class="gallery-filter" data-filter="barberia">Barbería</button>
+      <button class="gallery-filter" data-filter="transformacion">Cambios</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+      <div class="gallery-item reveal reveal-delay-1" data-category="transformacion">
+        <img src="/images/hero-main.png" alt="Transformación de imagen con color vibrante" loading="lazy">
+        <div class="gallery-item__overlay">
+          <div>
+            <div class="gallery-item__caption">Transformación de Color</div>
+            <div class="gallery-item__tag">Cambio de Imagen</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-category="color">
+        <img src="/images/color-effects.png" alt="Efectos de color balayage" loading="lazy">
+        <div class="gallery-item__overlay">
+          <div>
+            <div class="gallery-item__caption">Balayage Rosa Dorado</div>
+            <div class="gallery-item__tag">Color y Efectos</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-3" data-category="maquillaje">
+        <img src="/images/makeup-service.png" alt="Maquillaje profesional glamuroso" loading="lazy">
+        <div class="gallery-item__overlay">
+          <div>
+            <div class="gallery-item__caption">Maquillaje Glamuroso</div>
+            <div class="gallery-item__tag">Maquillaje</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-category="barberia">
+        <img src="/images/barber-service.png" alt="Corte de cabello masculino profesional" loading="lazy">
+        <div class="gallery-item__overlay">
+          <div>
+            <div class="gallery-item__caption">Corte y Estilo Masculino</div>
+            <div class="gallery-item__tag">Barbería</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-category="peinado">
+        <img src="/images/hairstyle-service.png" alt="Peinado elegante para eventos" loading="lazy">
+        <div class="gallery-item__overlay">
+          <div>
+            <div class="gallery-item__caption">Peinado para Eventos</div>
+            <div class="gallery-item__tag">Peinado</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-3" data-category="transformacion">
+        <img src="/images/gallery-transformation.png" alt="Cambio de imagen completo" loading="lazy">
+        <div class="gallery-item__overlay">
+          <div>
+            <div class="gallery-item__caption">Cambio de Imagen Completo</div>
+            <div class="gallery-item__tag">Transformación</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-category="barberia">
+        <img src="/images/gallery-men.png" alt="Grooming masculino profesional" loading="lazy">
+        <div class="gallery-item__overlay">
+          <div>
+            <div class="gallery-item__caption">Grooming Premium</div>
+            <div class="gallery-item__tag">Barbería</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-category="color">
+        <img src="/images/about-portrait.png" alt="Estilista profesional" loading="lazy">
+        <div class="gallery-item__overlay">
+          <div>
+            <div class="gallery-item__caption">Estilo Profesional</div>
+            <div class="gallery-item__tag">Estilo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-3" data-category="maquillaje">
+        <img src="/images/hero-main.png" alt="Look editorial de belleza" loading="lazy">
+        <div class="gallery-item__overlay">
+          <div>
+            <div class="gallery-item__caption">Look Editorial</div>
+            <div class="gallery-item__tag">Maquillaje</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-banner">
+  <div class="container">
+    <h2 class="cta-banner__title reveal">
+      ¿Inspirada? <span class="highlight-gold">Agenda</span> tu transformación
+    </h2>
+    <p class="cta-banner__subtitle reveal reveal-delay-1">
+      Cada look en mi galería puede ser tuyo
+    </p>
+    <div class="cta-banner__actions reveal reveal-delay-2">
+      <a href="/agenda" class="btn btn--gold">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        Agendar Cita
+      </a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

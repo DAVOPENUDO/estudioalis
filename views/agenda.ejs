@@ -1,0 +1,152 @@
+<%- include('partials/header') %>
+
+<!-- ===== PAGE HEADER ===== -->
+<section class="page-header">
+  <div class="container">
+    <span class="section__label">Reserva tu Experiencia</span>
+    <h1 class="page-header__title">Agenda tu <span class="highlight-gold">Cita</span></h1>
+    <p class="page-header__subtitle">Completa el formulario y te contactaré por WhatsApp para confirmar tu reservación</p>
+  </div>
+</section>
+
+<!-- ===== APPOINTMENT FORM ===== -->
+<section class="section">
+  <div class="container">
+    <div class="agenda-layout">
+      <!-- Left: Info -->
+      <div class="agenda-info reveal">
+        <h2 class="agenda-info__title">Tu experiencia de <span class="highlight-gold">belleza</span> comienza aquí</h2>
+        <p class="agenda-info__text">
+          Llena el formulario con tus datos y preferencias. Al enviar, se abrirá 
+          WhatsApp con tu información lista para que pueda confirmar tu cita 
+          de manera rápida y personalizada.
+        </p>
+
+        <div class="agenda-info__features">
+          <div class="agenda-info__feature">
+            <div class="agenda-info__feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span>Confirmación rápida por WhatsApp</span>
+          </div>
+          <div class="agenda-info__feature">
+            <div class="agenda-info__feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span>Atención personalizada y profesional</span>
+          </div>
+          <div class="agenda-info__feature">
+            <div class="agenda-info__feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span>Asesoría previa sin costo adicional</span>
+          </div>
+          <div class="agenda-info__feature">
+            <div class="agenda-info__feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span>Productos de alta calidad y durabilidad</span>
+          </div>
+        </div>
+
+        <p style="font-size: 0.88rem; color: var(--gray); margin-bottom: 20px;">
+          También puedes agendar directamente por WhatsApp:
+        </p>
+
+        <a href="<%= whatsappLink %>?text=Hola%2C%20me%20gustaria%20agendar%20una%20cita%20en%20Estudio%20de%20Belleza%20Alis" target="_blank" rel="noopener" class="btn btn--whatsapp" style="width: 100%; justify-content: center;">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Agendar por WhatsApp
+        </a>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="form-container reveal reveal-delay-2">
+        <h3 class="form-container__title">Datos de tu cita</h3>
+        <p class="form-container__subtitle">Todos los campos marcados son obligatorios</p>
+
+        <form id="appointment-form">
+          <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono / WhatsApp *</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Tu número de WhatsApp" required>
+          </div>
+
+          <div class="form-group">
+            <label for="servicio">Servicio de interés *</label>
+            <select id="servicio" name="servicio" required>
+              <option value="" disabled selected>Selecciona un servicio</option>
+              <optgroup label="Cambios de Imagen">
+                <option value="cambio-completo">Cambio de Imagen Completo</option>
+                <option value="asesoria-estilo">Asesoría de Estilo Personal</option>
+                <option value="look-evento">Look para Evento Especial</option>
+              </optgroup>
+              <optgroup label="Color y Efectos">
+                <option value="balayage-mechas">Balayage y Mechas</option>
+                <option value="color-fantasia">Color Fantasía</option>
+                <option value="tinte-global">Tinte Global y Retoque</option>
+                <option value="decoloracion">Decoloración y Platinado</option>
+              </optgroup>
+              <optgroup label="Maquillaje">
+                <option value="maquillaje-social">Maquillaje Social</option>
+                <option value="maquillaje-novia">Maquillaje de Novia</option>
+                <option value="maquillaje-editorial">Maquillaje Editorial</option>
+              </optgroup>
+              <optgroup label="Peinado">
+                <option value="peinado-evento">Peinados para Eventos</option>
+                <option value="corte-estilo">Corte y Estilo</option>
+                <option value="tratamiento-capilar">Tratamientos Capilares</option>
+              </optgroup>
+              <optgroup label="Barbería">
+                <option value="corte-caballero">Corte Caballero</option>
+                <option value="barba-perfilado">Barba y Perfilado</option>
+                <option value="combo-caballero">Combo Caballero</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fecha">Fecha preferida *</label>
+              <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="form-group">
+              <label for="hora">Hora preferida *</label>
+              <input type="time" id="hora" name="hora" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje adicional (opcional)</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Describe lo que deseas, alguna referencia o detalle que me ayude a preparar tu cita" rows="4"></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn--gold" style="width: 100%; justify-content: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              Enviar y Confirmar por WhatsApp
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
