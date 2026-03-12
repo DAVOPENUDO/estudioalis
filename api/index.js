@@ -53,8 +53,15 @@ app.get('/agenda', (req, res) => {
 
 app.get('/galeria', (req, res) => {
   res.render('galeria', {
-    title: 'Galeria | Estudio de Belleza Alis',
-    description: 'Explora nuestra galeria de transformaciones, cambios de color, maquillaje profesional y estilos de barberia.'
+    title: 'Galería | Estudio de Belleza Alis',
+    description: 'Explora nuestra galería de transformaciones, cambios de color, maquillaje profesional y estilos de barbería.'
+  });
+});
+
+app.get('/barberia', (req, res) => {
+  res.render('barberia', {
+    title: 'Barbería Premium | Estudio de Belleza Alis',
+    description: 'Descubre nuestra exclusiva sección de barbería para caballeros: desde cortes clásicos hasta afeitado tradicional con navaja y tratamientos faciales.'
   });
 });
 
